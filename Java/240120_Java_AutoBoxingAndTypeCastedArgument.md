@@ -77,6 +77,7 @@ public class StringEqualsCheck {
 ```
 
 **Tackling Curiosity**
+
 The `instanceof` in the `String.equals()` doens't make the error during the compile, even putting arguments of which type is _int_, _Integer_, _char[]_. I knew that `instanceof` operator (1) throws a compile error when those given two arguements are not with the inhertiance, and (2) returns true when the downcasting from the right to left is possible, else false. Then, why does not`compilerPassCheck(Object obj)` and `newInstanceOf(Object obj)` throw the error? 
 
 case argument: _int_
