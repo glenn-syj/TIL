@@ -1,4 +1,4 @@
-## How is HTML String in the response translated into HTML code>
+## How is HTML String in the response translated into HTML code?
 
 ### Source Code
 
