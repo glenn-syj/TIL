@@ -1,5 +1,3 @@
-# What is Spring IoC Container?
-
 ## What is Spring IoC Container?
 
 ### Explanation
@@ -44,6 +42,9 @@ After writing this article, I found out that those following issues would be hel
 **most helpful**
 https://docs.spring.io/spring-framework/reference/core/beans/introduction.html
 
+
 https://en.wikipedia.org/wiki/Inversion_of_control
+
 [https://www.baeldung.com/inversion-control-and-dependency-injection-in-spring#:~:text=What Is Inversion of Control,context of object-oriented programming](https://www.baeldung.com/inversion-control-and-dependency-injection-in-spring#:~:text=What%20Is%20Inversion%20of%20Control,context%20of%20object%2Doriented%20programming).
+
 https://docs.spring.io/spring-framework/docs/6.1.4/javadoc-api/org/springframework/beans/factory/BeanFactory.html
