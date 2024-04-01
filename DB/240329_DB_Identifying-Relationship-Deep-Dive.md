@@ -1,6 +1,7 @@
 ## Identifying Relationship Deep Dive
 
 **Last Modified: 2024-04-01**
+
 **Written By: @glenn-syj**
 
 ### Explanation
@@ -31,11 +32,11 @@ The identification dependency helps clear the ambiguousness. It is more meaningf
 
 The approach it has shows several advantages in my opinion: (1) Attributes migrated from the parent are handled through the design for identification, (2) An entity is clearly considered an independent entity. However, [The ERwin Data Modeler methods guide](https://ftpdocs.broadcom.com/cadocs/0/CA%20ERwin%20Data%20Modeler%20r8-ENU/Bookshelf_Files/PDF/ERwin_Methods.pdf) says that there is a risk that it might reflect the existence dependency.
 
-1. Outro
+3. Outro
 
 The practice inside the business frequently uses the non-identifying relationship. The most important here would be the identifical correlation between the super entity and the sub entity, not only the practice itself. Although the points of view which the existence dependency and identification depedency was slightly different, researching both helped understad the notion of identifying realtionship. 
 
-### Reference
+### References
 
 https://documentation.softwareag.com/webmethods/compendiums/v10-7/C_Design_and_Implement_BPMs/index.html#page/design_implement_bpm_compendium/D76294.html
 
