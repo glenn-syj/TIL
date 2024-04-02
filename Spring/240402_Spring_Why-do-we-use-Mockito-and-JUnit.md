@@ -20,8 +20,7 @@ Annotations like `@Mock`, `@DoNotMock`, `@Spy`, and `@Captor` help users safely 
 
 JUnit is a testing framework, especially one of the unit testing frameworks for Java. It automates an execution of codes for a test. It reduces the effort and the time devoted to the repetitive exeuction of codes when adding a new code.
 
-Its annotations also contributes to an 
-
+Both of them are frequently used together for a unit test. Before a deep dive into each framework, this article only illustrates the precise features.
 
 2. Frameworks over a manual test
 
