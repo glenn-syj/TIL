@@ -14,7 +14,7 @@ After narrowing down the reason why the path didn't exist, I found that the pare
 
 1. Why the route includes `org.eclipse.wst.server.core/`
 
-The `org.eclipse.wst.server.core/` folder is created by WTP (Web Tools Platform) using WST (Web Standard Tools). As its name looks like an API or a library name, I could found (a eclipse dev site)[https://eclipse.dev/webtools/wst/api/org/eclipse/wst/server/core/package-summary.html] summarizing the package.
+The `org.eclipse.wst.server.core/` folder is created by WTP (Web Tools Platform) using WST (Web Standard Tools). As its name looks like an API or a library name, there was [an eclipse dev site](https://eclipse.dev/webtools/wst/api/org/eclipse/wst/server/core/package-summary.html) summarizing the package.
 
 > ServerCore is the main entry-point and provides access to most of the remaining API. From here, you can get the existing server runtimes and servers, get the available server types, and access interfaces for all extension points.
 
