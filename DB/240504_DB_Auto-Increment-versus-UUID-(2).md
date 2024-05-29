@@ -2,7 +2,7 @@
 
 **Disclaimer**
 
-- Last modified(yy/mm/dd): 24/05/28
+- Last modified(yy/mm/dd): 24/05/29
 - Written By: @glenn-syj
 
 
@@ -16,7 +16,7 @@ In the last article `Auto Increment versus UUID (1)`, the benfits and drawbacks 
 
 What is an UUID? The benefits UUID has come from its own definition and structure. UUID means for Universally Unique IDentifier. It usually consists of 128 bits string. Although there are many versions of UUID known, the main candidates were UUID-v1 and UUID-v4. The UUID-v1 is based on the current time and MAC address or the node. The UUID v-4 is a randomly generated UUID. The latter sounds better when considering the security. However, I chose UUID-v1 as the project was run in the local dev environment, without deployment. However,  Lines below would be the reason why I chose.
 
-**AUTO_INCREMENT**
+**UUID**
 
 - Advantages
 
@@ -48,7 +48,7 @@ What is an UUID? The benefits UUID has come from its own definition and structur
 
 ### Conclusion
 
-UUID also has pros and cons. There are no silver bullet in deciding the PK. The important relys on the environment and the schema. However, the sync with distributed environments which stems from the uniqueness should be mentioned. It can ensure the scalability. In the next article, I would like to explain my PK plan.
+UUID also has pros and cons. There are no silver bullet in deciding the PK. The important relys on the environment and the schema. However, the sync with distributed environments which stems from the uniqueness should be mentioned. Therefore, what's important is that the UUID ensures the scalability in my view. In the next article, I would like to explain my PK plan when using UUID.
 
 ### References
 
