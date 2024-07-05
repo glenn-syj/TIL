@@ -2,14 +2,14 @@
 
 **Disclaimer**
 
-- Last modified(yy/mm/dd): 24/07/04
+- Last modified(yy/mm/dd): 24/07/05
 - Written By: [@glenn-syj](https://github.com/glenn-syj)
 
 ## Explanation
 
 ### Start Point
 
-In [the previous article](https://github.com/glenn-syj/TIL/blob/master/WebSocket/240703_Websocket_WebSocket-and-STOMP-(1).md), there was a main concern that why WebSocket is related to STOMP. Saying again, WebSocket is a 
+In [the previous article](https://github.com/glenn-syj/TIL/blob/master/WebSocket/240703_Websocket_WebSocket-and-STOMP-(1).md), there was a main concern that why WebSocket is related to STOMP.
 
 This article features a brief description of the STOMP and the reason WebSocket and STOMP are tied together.
 
@@ -52,11 +52,25 @@ Strickly saying, although WebSocket is not a MOM(Message Oriented Middleware), W
 
 **Why WebSocket with STOMP?**
 
-What should be mentioned first is that WebSocket messages are on the frame based communication. 
+- WebSocket message based on the frame
 
+What should be mentioned first is that WebSocket messages are on the frame based communication. The data type in the frame could be text, binary, ping/pong, and so on. In the browser environment, however, WebSocket only hanldles text or binary data.
 
+WebSocket message frame does not restrict the message content via its own protocol. As it is a low level without further additional functionalities, it does not control the frame. Here starts the advatanges of using STOMP.
 
+- STOMP advantages
 
+Commands provided by STOMP like CONNECT, SEND, and SUBSCRIBE helps discern the message type. With the null character, STOMP also makes it easier to handle WebSocket message by structuring the start (command) and the end (null character) of the message.
+
+STOMP defines headers with `key:value` pair. They hold meta data of the message. Using headers, WebSocket communication could be configured with annotating the destination, contents type, and priority.
+
+These features let STOMP support the Pub/Sub model in WebSocket. The Pub/Sub architecture loosens coupling between components, assures high scalability, and supports asynchronous event-driven communication. The commands like SUBSCRIBE and SEND in the STOMP fits the model. Headers containing information needed also help implement complicated messaging patterns over the WebSocket.
+
+**Alternatives for STOMP**
+
+The STOMP would and should not be the only one using on the WebSocket. There are other protocols like AMQP(Advancded Message Queueing Protocol), MQTT(Message Queuing Telemetry Transport), XMPP(Extensible Messaging and Presence Protocol), CoAP(Constrained Application Protocol), HTTP/2, WebRTC. 
+
+As STOMP has an upper hand in the text messaging, it would be valid to assume that the Spring Document WebSocket quick start uses STOMP with its efficiency. However, the sub protocols should be highly considered through the purpose of the service.
 
 ### References 
 
@@ -64,4 +78,6 @@ https://en.wikipedia.org/wiki/Streaming_Text_Oriented_Messaging_Protocol
 
 https://stackoverflow.com/questions/40988030/what-is-the-difference-between-websocket-and-stomp-protocols
 
-https://en.wikipedia.org/wiki/Duplex_(telecommunications)#FULL-DUPLEX
+https://ably.com/topic/pub-sub
+
+https://stackoverflow.com/questions/67436517/what-is-a-websocket-subprotocol
