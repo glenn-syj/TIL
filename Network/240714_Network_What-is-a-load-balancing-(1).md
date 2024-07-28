@@ -1,4 +1,4 @@
-# What is load balancer
+# What is a load balancing (1)
 
 **Disclaimer**
 
@@ -27,4 +27,28 @@ Assume that the total amount of the computation is 42 and the number of processo
 
 Then, what if the tasks cannot be subdivided? It would be much harder than the case of sub-divisilbe tasks, the relatively fair one can be found.
 
+2. Static Load Balancing
+
+If the execution time is not known, the static load balancing would be possible. The static load balancing is used to decide which server is the most proper among the servers.
+
+- Round Robin Scheduling
+
+The first server gets the first request. The second server, the second request. This matching goes through till the every server receives the reqeust, and the next request goes to the first server again.
+
+If there is a priority from the volume or the power in the server, each server can have diffrent weight.
+
+- Randomized Static
+
+Servers could be assigned tasks randomly. If the number of the tasks is known and not easily be changed, a random permutation caculated earlier would be helpful. However, the randomness harms the performance with the maximum size of the tasks.
+
+- IP hashing
+
+Hahsed user IP address decides which server receives the request. Then, requests from the same client are always sent to the same server till the address becomes changed.
+
+It is a kind of sticky session based on the IP address. As the IP address could be changed with dynamic IP assignment or VPN, the session has a chance of unconnect.
+
 ### References
+
+https://en.wikipedia.org/wiki/Load_balancing_(computing)
+
+https://www.f5.com/glossary/load-balancer#:~:text=A%20load%20balancer%20enables%20distribution,on%20a%20number%20of%20servers.
