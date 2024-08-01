@@ -45,7 +45,7 @@ _Answer 2_
 
 On the README of [LLOOGG](https://github.com/antirez/lloogg), the project was described as a realtime log analyzer web app for displaying the accesses on the website. Its main features turned to tracking adsense clicks (they were removed later, as Sanfilippo said). In the tracking, the user patterns got captured and aggreagted. The story behind Redis sounds quite interesting.
 
-Now I see why it had served as a Redis test bed. From the first time, Redis seems to get developed in the purpose of a low-latency real-time web application. `Hyperloglog`, a probabalistic data structure in Redis commonly used for a website analytics is not far from this viewpoint.
+Now I see why it had served as a Redis test bed. From the first time, Redis seems to get developed in serving a low-latency real-time web application. `Hyperloglog`, a probabilistic data structure in Redis commonly used for a website analytics is not far from this viewpoint.
 
 ### References
 
