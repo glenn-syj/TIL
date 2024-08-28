@@ -1,4 +1,4 @@
-# What is Cache? (1)
+# What is Cache?
 
 **Disclaimer**
 
@@ -25,6 +25,22 @@ Cache plays a role of a data storage. Above the fact that there are lots of cach
 
 #### The trade-off in Cache
 
+Caching is not the silver bullet for sure. While dramatically improving system performance, introducing cache has a potential complexity and trade-offs. It means that caching strategies should be considered in a sophisticated way. These are the kinds of trade-ofss in cache.
+
+- Memory Usage vs. Performance
+
+Caching frequently accessed data comes with consuming memory resources. For Example, an environment which has a limited memory may cause suffering to other parts for a resource contention. It affects the whole system, harming the system performance.
+
+- Data Freshness vs. Speed
+
+Cached data might be stale compared to the latest information in the primary data storage. When real-time data is crucial, the trade-off should be adjusted to fulfill the own purpose. It means that how much data inconsistency the service can endure should be considered.
+
+- Cache Size vs. Cache Misses
+
+A smaller cache results to more cache misses, while a larger one more memory usage. When there is no requested data in cache, the data should be fetched from the original data sources. However, the more memory usage it needs, the more expensive cost it requires.
+
 ### References
 
 https://learn.microsoft.com/en-us/dotnet/framework/network-programming/time-based-cache-policies
+
+https://stackoverflow.com/questions/48589218/what-are-the-trade-offs-of-larger-cache-memories-could-we-use-one-to-replace-s
